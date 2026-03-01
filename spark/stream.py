@@ -9,8 +9,8 @@ from pyspark.sql.types import StringType, StructType, StructField
 
 KAFKA_BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP", "kafka:29092")
 MINIO_ENDPOINT  = os.getenv("MINIO_ENDPOINT", "http://minio:9000")
-AWS_KEY         = os.getenv("AWS_ACCESS_KEY_ID", "minioadmin")
-AWS_SECRET      = os.getenv("AWS_SECRET_ACCESS_KEY", "minioadmin")
+AWS_KEY         = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET      = os.getenv("AWS_SECRET_ACCESS_KEY")
 
 spark = (
     SparkSession.builder

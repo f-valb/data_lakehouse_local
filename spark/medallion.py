@@ -16,8 +16,8 @@ from pyspark.sql.types import (
 from delta.tables import DeltaTable
 
 MINIO_ENDPOINT = os.getenv("MINIO_ENDPOINT", "http://minio:9000")
-AWS_KEY        = os.getenv("AWS_ACCESS_KEY_ID", "minioadmin")
-AWS_SECRET     = os.getenv("AWS_SECRET_ACCESS_KEY", "minioadmin")
+AWS_KEY        = os.getenv("AWS_ACCESS_KEY_ID")
+AWS_SECRET     = os.getenv("AWS_SECRET_ACCESS_KEY")
 INTERVAL_SECS  = int(os.getenv("MEDALLION_INTERVAL", "60"))
 
 spark = (

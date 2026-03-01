@@ -1,0 +1,21 @@
+# Credentials - never commit
+.env
+*.env
+
+# Local overrides
+docker-compose.override.yml
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Spark
+spark-warehouse/
+derby.log
