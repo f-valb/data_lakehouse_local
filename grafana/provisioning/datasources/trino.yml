@@ -1,0 +1,35 @@
+apiVersion: 1
+
+datasources:
+  - name: Trino-Bronze
+    type: grafana-trino-datasource
+    access: proxy
+    url: http://trino:8080
+    jsonData:
+      catalog: bronze
+      schema: default
+      username: admin
+    version: 1
+    editable: true
+
+  - name: Trino-Silver
+    type: grafana-trino-datasource
+    access: proxy
+    url: http://trino:8080
+    jsonData:
+      catalog: silver
+      schema: default
+      username: admin
+    version: 1
+    editable: true
+
+  - name: Trino-Gold
+    type: grafana-trino-datasource
+    access: proxy
+    url: http://trino:8080
+    jsonData:
+      catalog: gold
+      schema: default
+      username: admin
+    version: 1
+    editable: true
