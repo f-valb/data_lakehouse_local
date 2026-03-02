@@ -91,7 +91,7 @@ services:
 
   spark-stream:
     <<: *spark-common
-    command: python /app/stream.py
+    command: python3 /app/stream.py
     depends_on:
       kafka:
         condition: service_healthy
@@ -101,7 +101,7 @@ services:
 
   spark-medallion:
     <<: *spark-common
-    command: python /app/medallion.py
+    command: python3 /app/medallion.py
     depends_on:
       spark-stream:
         condition: service_started
